@@ -7,7 +7,7 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <h1>register page</h1>
+    <h1>Contáctanos</h1>
 <br>
 <form action="{{ url_for('dashboard.home') }}" method="post">
     {{ form.hidden_tag() }}
@@ -42,7 +42,7 @@
     </tbody>
 </table>
 
-<a href="{{ url_for('dashboard.propiedades') }}" class="btn">Crear propiedad</a>
+<a href="{{ url_for('dashboard.property') }}" class="btn">Crear propiedad</a>
 
 </body>
 </html>

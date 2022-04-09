@@ -1,5 +1,5 @@
 class BaseConfig(object):
-    SQLALCHEMY_DATABASE_URI = "sqlite:////todolist_database.db"
+    SQLALCHEMY_DATABASE_URI = "mysql://root:12345@localhost:3306/bienesraices"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_POOL_SIZE = 20
     SQLALCHEMY_POOL_TIMEOUT = 300
