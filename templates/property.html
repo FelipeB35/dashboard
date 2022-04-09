@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property</title>
+</head>
+<body>
+    <h1>Crear propiedades</h1>
+<br>
+<form action="{{ url_for('dashboard.property') }}" method="post">
+    {{ form.hidden_tag() }}
+    {{ form.name.label }}
+    {{ form.name }}
+    {{ form.category.label }}
+    {{ form.category }}
+    {{ form.city.label }}
+    {{ form.city }}
+    {{ form.size.label }}
+    {{ form.size }}
+    {{ form.clasification.label }}
+    {{ form.clasification }}
+    {{ form.price.label }}
+    {{ form.price }}
+    {{ form.details.label }}
+    {{ form.details }}
+    {{ form.submit }}
+</form>
+<br>
+</body>
+</html>

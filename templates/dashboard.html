@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>register page</h1>
+<br>
+<form action="{{ url_for('dashboard.home') }}" method="post">
+    {{ form.hidden_tag() }}
+    {{ form.name.label }}
+    {{ form.name }}
+    {{ form.mail.label }}
+    {{ form.mail }}
+    {{ form.message.label }}
+    {{ form.message }}
+    {{ form.submit }}
+</form>
+<br>
+
+<h1>Mensajes</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>email</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for Message in MessageList %}
+        <tr>
+            <td>{{ Message.name }}</td>
+            <td>{{ Message.mail }}</td>
+            <td>{{ Message.message }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{{ url_for('dashboard.propiedades') }}" class="btn">Crear propiedad</a>
+
+</body>
+</html>
