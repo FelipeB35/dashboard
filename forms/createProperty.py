@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, IntegerField
+from wtforms import StringField, SubmitField, IntegerField, FloatField
 from wtforms.validators import InputRequired, Length, ValidationError
 
 class createPropertyForm(FlaskForm):
@@ -27,10 +27,9 @@ class createPropertyForm(FlaskForm):
         render_kw={"placeholder": "ciudad"},
     )
 
-    size = StringField(
+    size = IntegerField(
         validators=[
-            InputRequired(),
-            Length(min=3, max=200),
+            InputRequired()
         ],
         render_kw={"placeholder": "tamaño"},
     )
@@ -43,10 +42,9 @@ class createPropertyForm(FlaskForm):
         render_kw={"placeholder": "clasificacion"},
     )
     
-    price = StringField(
+    price = IntegerField(
         validators=[
-            InputRequired(),
-            Length(min=3, max=200),
+            InputRequired()
         ],
         render_kw={"placeholder": "precio"},
     )
