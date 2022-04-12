@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block title %}Ejemplo{% endblock %}
+{% block contents %}
+
+<div style=" background-image: url(static/images/ej.jpg)" class="img-inmueble">
+
+</div>
+<h1 class="centrado">Casa en Cumbres de Cuscatlán</h1>
+
+<div class="contenedor detalles">
+  <div class="resumen-propiedad cuadro">
+    <h3>Descripción de la propiedad</h3>
+      <p>
+        Planta 1:
+        <br>
+        - Baño social.
+        <br>
+        - Estudio con baño.
+        <br>
+        - Sala principal.
+        <br>
+        - Comedor.
+        <br>
+        - Área de cocina con pantry.
+        <br>
+        - Área de servicio completa con habitación adicional para personal de seguridad,
+            motorista ó jardinero que incluye baño completo.
+        <br>
+            - Área de bar con baño.
+        <br>
+        - Sótano.
+        <br>
+        - Jardín amplio.
+        <br>
+        - Dormitorio adicional en el área
+        <br>
+        Planta 2:
+        <br>
+        - Habitación principal con walk in closet, jacuzzi, baño ducha y doble lavamanos.
+        <br>
+            - 3 habitaciones junior con walk in closet y baño cada una.
+        <br>
+        - Amplia sala familiar.
+        <br>
+        - Dos accesos a la segunda planta; acceso principal y acceso al jardín, el que puede servir como salida de emergencia.
+      </p>
+    
+  </div>
+  <div class="precio cuadro">
+    <p>Alquiler</p>
+    <p class="precio-p">Precio: $6,000,000</p>
+  </div>
+  <div class="categorias cuadro">
+    <ul class="iconos">
+      <li class="centrado icono">
+        <p>Dormitorios</p>
+        <i class="fa-solid fa-bed"></i>
+        <p>5</p>
+      </li>
+      <li class="centrado icono">
+        <p>Baños</p>
+        <i class="fa-solid fa-toilet"></i>
+        <p>7</p>
+      </li>
+      <li class="centrado icono">
+        <p>Parqueos</p>
+        <i class="fa-solid fa-car"></i>
+        <p>3</p>
+      </li>
+      <li class="centrado icono">
+        <p>Medidas</p>
+        <i class="fa-solid fa-ruler-combined"></i>
+        <p>3</p>
+      </li>
+    </ul>
+  </div>
+</div>
+  <h1 class="centrado">Galería de fotos</h1>
+  <div class="seccion contenedor no-100">
+    <div class="galeria">
+        <a href="static/images/galeria/01.jpg" data-lightbox="galeria">
+            <img src="static/images/galeria/thumbs/01.jpg" alt="Imagen 1" width="300px" height="250px">
+        </a>
+        <a href="static/images/galeria/02.jpg" data-lightbox="galeria">
+            <img src="static/images/galeria/thumbs/02.jpg" alt="Imagen 2" width="300px" height="250px">
+        </a>
+        <a href="static/images/galeria/03.jpg" data-lightbox="galeria">
+            <img src="static/images/galeria/thumbs/03.jpg" alt="Imagen 3" width="300px" height="250px">
+        </a>
+        <a href="static/images/galeria/02.jpg" data-lightbox="galeria">
+          <img src="static/images/galeria/thumbs/02.jpg" alt="Imagen 2" width="300px" height="250px">
+        </a>
+
+    </div>
+</div>
+
+
+{% endblock %}
+
