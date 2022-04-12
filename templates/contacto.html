@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}Contacto{% endblock %}
+{% block contents %}
+    <div class="container-fluid">
+      <div class="areaFooter auto_margin">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <div class="content">
+              <h2><strong>Contacto</strong></h2>
+
+              <nav class="redes-contacto">
+                <p>Tel: +(503) 7844 9035</p>
+                <a href="https://instagram.com/brcevallos "><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/Cevallos-Bienes-Raices-107432514364803/ "><i class="fab fa-facebook-f"></i></a>
+                <a href="bienesraicescevallos@gmail.com"><i class="fa-solid fa-envelope"></i></i></a>
+
+              <!-- <p>Redes sociales:
+                <a href="https://instagram.com/brcevallos ">Instagram</a>
+                <a href="https://www.facebook.com/Cevallos-Bienes-Raices-107432514364803/ ">Facebook</a>
+              </p>
+              <p>Telefono: (503) 78449035&nbsp;</p>
+              <p>Email:
+                <a href="bienesraicescevallos@gmail.com" target="_blank"
+                  >bienesraicescevallos@gmail.com</a>
+              </p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form class="formulario" action="">
+      <fieldset>
+        <legend>¡Contáctenos!</legend>
+
+        <p>
+          <label for="nombre">Nombre:</label>
+          <input type="text" class = "field" id="nombre" placeholder="Tu nombre" required="" />
+        </p>
+
+        <p>
+          <label for="email">Email:</label>
+          <input type="email" class = "field" id="email" placeholder="Correo electrónico" required="" />
+        </p>
+
+        <p>
+          <label for="telefono">Telefóno:</label>
+          <input type="tel" class = "field" id="telefono" placeholder="Tu teléfono" required="" />
+        </p>
+
+        <p>
+          <label for="mensaje">Mensaje:</label>
+          <input type="mensaje" class = "field" id="mensaje" placeholder="Mensaje" required="" />
+        </p>
+
+        <p class="center-content"></div>
+          <input type="submit" class ="go go-now  " value = "Enviar datos">
+        </p> 
+      </fieldset>
+    </form>
+{% endblock %}

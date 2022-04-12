@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block title %}Sobre Nosotros{% endblock %}
+{% block contents %}
+  <body>
+    <main class="contenedor">
+      <h1 class="centrado AN">Acerca de nosotros</h1>
+      <div class="contenido-nosotros">
+        <div class="img">
+          <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="">
+        </div>
+        <div class="texto-historia">
+            <h4> Historia</h4>
+            <!--Texto de historia-->
+            <p>
+              Bienes Raíces Cevallos nació en el año 2007, debido a que por cuestiones personales de su propietaria: Nora María Cevallos, necesitó de servicios inmobiliarios.
+              Razón que permitió descubriera el interesante y peculiar mundo de los bienes raíces.Fue desde entonces que despertó curiosidad en trabajar en mencionado rubro, 
+              ya que de cierta manera debía poner en práctica un poco de lo estudiado en la carrera universitaria que había cursado: Ciencias de la Comunicación.
+              Hasta la fecha la firma sigue desarrollándose, aprendiendo, expandiéndose y conociendo cada detalle de lo particular que se vuelve cada negocio; cultivando no solo relaciones de trabajo, 
+              sino también dejando huella en sus clientes.
+            </p>
+        </div>
+      </div>
+    </main>
+    
+    <!--Texto de misión y visión-->
+    <!--<section class="contenedor2">
+      <h2 class="titulo2">Misión y Visión</h2>
+      <div class="texto-historia">
+        <h3>Misión</h3>
+        <p>
+          Dar un ético, profesional y responsable servicio inmobiliario/
+          atención al cliente; siendo capaz de construir relaciones cordiales y
+          amistades a largo plazo con mis clientes.
+        </p>
+        <h3>Visión</h3>
+        <p>
+          Ser una agencia inmobiliaria posicionada y recordada al momento de
+          necesitar comprar, vender o alquilar inmuebles.
+        </p>
+      </div>
+    </section>
+    -->
+    <section class=" contenedor-seccion contenedor-nosotros"> 
+      <h1 class="centrado">Más sobre nosotros</h1>  
+      <div class="nosotros">
+        <div class="MV cuadro">
+          <i class="fa-solid fa-eye"></i>
+            <h3>Vision</h3>
+            <p>Ser una agencia inmobiliaria posicionada y recordada al momento de
+              necesitar comprar, vender o alquilar inmuebles.</p>
+        </div>
+        <div class="MV cuadro">
+          <i class="fa-solid fa-bullseye"></i>
+            <h3>Mision</h3>
+            <p>Dar un ético, profesional y responsable servicio inmobiliario/
+              atención al cliente; siendo capaz de construir relaciones cordiales y
+              amistades a largo plazo con mis clientes.</p>
+        </div>
+        <div class="MV cuadro">
+          <i class="fa-solid fa-heart"></i>
+            <h3>Valores</h3>
+            <ul class="Valores">
+              <li>Empatía</li>
+              <li>Honestidad</li>
+              <li>Responsabilidad</li>
+              <li>Trato profesional</li>
+
+            </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--Texto de valores
+    <section class="contenedor3">
+      <h2 class="titulo2">Valores</h2>
+      <div class="texto-historia">
+        <h3>Empatía</h3>
+        <p>
+          Ser capaz de situarme en el "lugar de mis clientes" y entender de
+          primera mano sus necesidades.
+        </p>
+        <h3>Honestidad</h3>
+        <p>
+          Actuar correctamente y en concordancia con los valores morales que un
+          ser humano debe tener.
+        </p>
+        <h3>Responsabilidad</h3>
+        <p>
+          Proceder con la debida seriedad en el desarrollo de todo proceso de
+          negocios.
+        </p>
+        <h3>Trato profesional</h3>
+        <p>
+          Generar muy buenas relaciones de trabajo, con el objetivo de hacer una
+          armoniosa y respetuosa experiencia de negocios.
+        </p>
+      </div>
+    </section>
+  -->
+{% endblock %}
