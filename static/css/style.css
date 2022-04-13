@@ -1010,8 +1010,12 @@ input, textarea{
 
 .alldash {
     background-color: #1567a6;
+    font-size: x-large;
 }
 
+.allprop {
+    font-size: x-large;
+}
 
 .title-prop {
     text-align-last: center;
