@@ -4,29 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href= "{{url_for('static', filename='css/Normalize.css')}}">
+    <link rel="stylesheet" href= "{{url_for('static', filename='css/lightbox.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <title>Property</title>
 </head>
 <body>
-    <h1>Crear propiedades</h1>
+    <div class="title-prop">
+     <h1>Crear propiedades</h1>
+    </div>
 <br>
-<form action="{{ url_for('dashboard.property') }}" method="post">
-    {{ form.hidden_tag() }}
-    {{ form.name.label }}
-    {{ form.name }}
-    {{ form.category.label }}
-    {{ form.category }}
-    {{ form.city.label }}
-    {{ form.city }}
-    {{ form.size.label }}
-    {{ form.size }}
-    {{ form.clasification.label }}
-    {{ form.clasification }}
-    {{ form.price.label }}
-    {{ form.price }}
-    {{ form.details.label }}
-    {{ form.details }}
-    {{ form.submit }}
-</form>
+
+<div class="props">
+    <form action="{{ url_for('dashboard.property') }}" method="post" class="props">
+        
+        {{ form.hidden_tag() }}
+        <p>
+            <div class="one">
+                {{ form.name.label }}
+                {{ form.name }}
+        </p>
+            </div>
+            
+        <p>
+            
+            <div class="two">
+                {{ form.category.label }}
+                {{ form.category }}
+            </div>
+            
+        </p>
+
+        <p>
+            <div class="one">
+                {{ form.city.label }}
+                {{ form.city }}
+            </div>
+
+        </p>
+
+
+        <p>
+            <div class="one">
+
+            </div>
+
+            <div class="two">
+                {{ form.size.label }}
+                {{ form.size }}
+            </div>
+            
+        </p>
+
+
+        <p>
+            <div class="one">
+                {{ form.clasification.label }}
+                {{ form.clasification }}
+            </div>
+        </p>
+
+
+        <p>
+
+            <div class="two">
+                {{ form.price.label }}
+                {{ form.price }}
+            </div>
+
+        </p>
+
+
+        <p>
+            <div class="one">
+                {{ form.details.label }}
+                {{ form.details }}
+            </div>
+
+        </p>
+        
+        
+        <p>
+            {{ form.submit }}
+        </p>
+        
+        
+        
+    </form>
+</div>
 <br>
 </body>
 </html>
