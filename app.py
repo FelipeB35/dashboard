@@ -6,6 +6,7 @@ from utils.db import db
 from flask_migrate import Migrate
 from routes.auth import auth
 from routes.dashboard import dashboard
+from routes.home import house
 
 app = Flask(__name__)
 
@@ -19,3 +20,4 @@ login_manager.init_app(app)
 
 app.register_blueprint(dashboard)
 app.register_blueprint(auth)
+app.register_blueprint(house)
