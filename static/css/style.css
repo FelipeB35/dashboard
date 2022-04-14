@@ -1036,28 +1036,6 @@ input, textarea{
 /* imagen y texto portada home */
 
 
-
-
-.resumen-pa{
-    position: relative;
-    padding: 12rem 0;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    
-}
-
-.resumen-pa li{
-    text-align: center;
-    flex: 0 0 25%;
-    color: white;
-    text-transform: uppercase;
-    font-size: 2.4rem;
-    font-family: 'Bebas Neue', cursive;
-}
-
-
-
 .site-header {
     text-align: center;
     align-content: center;
@@ -1065,9 +1043,7 @@ input, textarea{
     color: white;
     font-size: 6.5rem;
     margin: 0 0 0 0;
-
     position: relative;
-    
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
