@@ -270,21 +270,21 @@ header .textos-header {
         background-size: cover;
         background-attachment: fixed;
         position: relative;
-        
-   
-    
-    
-    
-    /* height: 85vh;
-    Para que tome el tamaño de la pantalla del usuario
-    background-image: url(../images/hero2.jpg);
-    background-position: center;
-    background-size: cover;
-
-    width: 100%; */
-   
+        /* text-align: center;
+        align-content: center; */
     
 }
+.mover {
+    align-content: center;
+}
+
+.site-header h1 {
+    /* position: absolute; */
+    text-align: center;
+    align-content: center;
+}
+
+
 /*NavBar*/
 .navbar{
     background-color: white;
@@ -1031,3 +1031,45 @@ input, textarea{
 
 }
 
+
+
+/* imagen y texto portada home */
+
+
+
+
+.resumen-pa{
+    position: relative;
+    padding: 12rem 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.resumen-pa li{
+    text-align: center;
+    flex: 0 0 25%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+
+.site-header {
+    text-align: center;
+    align-content: center;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    font-size: 6.5rem;
+    margin: 0 0 0 0;
+
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
