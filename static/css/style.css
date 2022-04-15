@@ -225,9 +225,9 @@ a{
 header{
     width: 100%; 
     height: 600px;
-    background: #DA22FF;  
-    background: -webkit-linear-gradient(to right, #b363f881, #cc66e0a2),url(../images/hero2.jpg); 
-    background: linear-gradient(to right, #b363f881, #cc66e0a2),url(../images/hero2.jpg); 
+    background: #5c64ac;  
+    background: -webkit-linear-gradient(to right, #9763f881, #a166e0a2),url(../images/hero2.jpg); 
+    background: linear-gradient(to right, #a463f881, #9566e0a2),url(../images/hero2.jpg); 
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -264,9 +264,9 @@ header .textos-header {
    
         width: 100%; 
         height: 600px;
-        background: #DA22FF;  
-        background: -webkit-linear-gradient(to right, #832bcf8d, #832bcf8d),url(../images/hero2.jpg); 
-        background: linear-gradient(to right, #832bcf8d, #832bcf8d),url(../images/hero2.jpg); 
+        background: #6f57c5;  
+        background: -webkit-linear-gradient(to right, #5c2bcf8d, #4c2bcf8d),url(../images/hero2.jpg); 
+        background: linear-gradient(to right, #622bcf8d, #622bcf8d),url(../images/hero2.jpg); 
         background-size: cover;
         background-attachment: fixed;
         position: relative;
