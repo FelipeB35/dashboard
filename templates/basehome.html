@@ -22,10 +22,10 @@
           <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="">
         </div>
         <div class="nav">
-          <a href="home.html">Home</a>
-          <a href="investigacion.html">Investigacion</a>
-          <a href="nosotros.html">Nosotros</a>
-          <a href="contacto.html">Contacto</a>
+          <a href="{{ url_for('home.home') }}">Home</a>
+          <a href="{{ url_for('investigacion.investigacion') }}">Investigacion</a>
+          <a href="{{ url_for('nosotros.nosotros') }}">Nosotros</a>
+          <a href="{{ url_for('contacto.contacto') }}">Contacto</a>
         </div>
       </div>
      

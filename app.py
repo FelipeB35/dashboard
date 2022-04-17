@@ -8,6 +8,9 @@ from routes.auth import auth
 from routes.dashboard import dashboard
 from routes.home import house
 from routes.contacto import contact
+from routes.investigacion import inv
+from routes.nosotros import about
+from routes.propiedad import prop
 
 app = Flask(__name__)
 
@@ -23,3 +26,6 @@ app.register_blueprint(dashboard)
 app.register_blueprint(auth)
 app.register_blueprint(house)
 app.register_blueprint(contact)
+app.register_blueprint(inv)
+app.register_blueprint(about)
+app.register_blueprint(prop)

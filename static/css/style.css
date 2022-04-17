@@ -879,6 +879,9 @@ word-break: normal;
 
 .formulario{
     text-align: center;
+    min-width: 25vw;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .btn{
@@ -892,13 +895,16 @@ word-break: normal;
 
 .go-now{
 	color: white;
-	background-color: #560148;
+	background-color: var(--secundario);
+    margin: 1rem 0;
+    padding: 1.5rem 0;
+    width: 100%;
 }
 .go-now:hover{
-	background-color: #560148;	
+	background-color: var(--secundario);	
 }
 .go-now:active{
-	background-color: #560148;
+	background-color: var(--secundario);
 }
 
 form{
@@ -909,6 +915,7 @@ form{
     padding: 20px;
     margin: 0 auto;
     width: 300px;
+
 }
 
 input, textarea{
@@ -921,8 +928,7 @@ input, textarea{
 .field{
     border: solid 1px #ccc;
     padding: 10px;
-
-    
+    width: 100%;
 }
 
 .field:focus{
