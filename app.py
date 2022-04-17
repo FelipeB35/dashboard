@@ -8,6 +8,7 @@ from routes.auth import auth
 from routes.dashboard import dashboard
 from routes.home import house
 from routes.contacto import contact
+from routes.post import post
 
 app = Flask(__name__)
 
@@ -23,3 +24,4 @@ app.register_blueprint(dashboard)
 app.register_blueprint(auth)
 app.register_blueprint(house)
 app.register_blueprint(contact)
+app.register_blueprint(post)
