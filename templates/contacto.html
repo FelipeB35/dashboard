@@ -29,33 +29,19 @@
       </div>
     </div>
 
-    <form class="formulario" action="">
-      <fieldset>
-        <legend>¡Contáctenos!</legend>
+        
+        <form class="formulario" action="{{ url_for('contacto.contacto') }}" method="post">
+          <legend>¡Contáctenos!</legend>
+          {{ form.hidden_tag() }}
+          {{ form.name.label }}
+          {{ form.name(class="field", required='required') }}
+          {{ form.mail.label }}
+          {{ form.mail(class="field", required='required') }}
+          {{ form.message.label }}
+          {{ form.message(class="field", required='required') }}
+          {{ form.submit(class="go go-now") }}
+        </form>
 
-        <p>
-          <label for="nombre">Nombre:</label>
-          <input type="text" class = "field" id="nombre" placeholder="Tu nombre" required="" />
-        </p>
-
-        <p>
-          <label for="email">Email:</label>
-          <input type="email" class = "field" id="email" placeholder="Correo electrónico" required="" />
-        </p>
-
-        <p>
-          <label for="telefono">Telefóno:</label>
-          <input type="tel" class = "field" id="telefono" placeholder="Tu teléfono" required="" />
-        </p>
-
-        <p>
-          <label for="mensaje">Mensaje:</label>
-          <input type="mensaje" class = "field" id="mensaje" placeholder="Mensaje" required="" />
-        </p>
-
-        <p class="center-content"></div>
-          <input type="submit" class ="go go-now  " value = "Enviar datos">
-        </p> 
-      </fieldset>
-    </form>
 {% endblock %}
+
+
