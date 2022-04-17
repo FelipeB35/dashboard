@@ -26,7 +26,6 @@ app.register_blueprint(dashboard)
 app.register_blueprint(auth)
 app.register_blueprint(house)
 app.register_blueprint(contact)
-
 app.register_blueprint(inv)
 app.register_blueprint(about)
 app.register_blueprint(prop)
