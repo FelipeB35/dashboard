@@ -4,6 +4,6 @@ from utils.db import db
 house = Blueprint("home", __name__)
 
 
-@house.route("/home")
+@house.route("/")
 def home():
     return render_template("home.html")

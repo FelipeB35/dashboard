@@ -1,13 +1,16 @@
 from flask import Blueprint, render_template, redirect, url_for
+from flask_login import login_user, login_required, current_user
 from utils.db import db
 from forms.createMessage import createMessageForm
 from forms.createProperty import createPropertyForm
 from models.property import Property
 from models.message import Message
+from models.user import User
 
 dashboard = Blueprint("dashboard", __name__)
 
-@dashboard.route("/", methods=["GET", "POST"])
+@dashboard.route("/dashboard", methods=["GET", "POST"])
+@login_required
 def home():
     form = createMessageForm()
     MessageList = Message.query.all()
@@ -21,9 +24,14 @@ def home():
     form.name.data = ""
     form.mail.data = ""
     form.message.data = ""
-    return render_template("dashboard.html", form = form, MessageList = MessageList)
-
+    if "admin" in current_user.rank:
+        return render_template("dashboard.html", form = form, MessageList = MessageList)
+    else:
+        return redirect(url_for("home.home"))
+    
+    
 @dashboard.route("/Propiedades", methods=["GET", "POST"])
+@login_required
 def property():
     form = createPropertyForm()
     if form.validate_on_submit():
@@ -37,4 +45,7 @@ def property():
         newProperty = Property(name, category, city, size, clasification, price, details)
         db.session.add(newProperty)
         db.session.commit()
-    return render_template("property.html", form = form)
+    if "admin" in current_user.rank:
+        return render_template("property.html", form = form)
+    else:
+        return redirect(url_for("home.home"))

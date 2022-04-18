@@ -26,7 +26,6 @@ def login():
                 login_user(currentUser)
                 return redirect(url_for("dashboard.home"))
     return render_template("login.html", form=form)
-    return redirect('create.html')
 
 @auth.route("/register", methods=["GET", "POST"])
 def register():
