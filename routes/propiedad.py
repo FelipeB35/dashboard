@@ -5,7 +5,6 @@ from models.property import Property
 prop = Blueprint("propiedad", __name__)
 
 
-@prop.route("/propiedad/<int:propertyId>", methods=["GET", "POST"])
-def propiedad(propertyId):
-    property = Property.query.filter_by(id=propertyId).first()
-    return render_template("propiedad.html", property = property)
+@prop.route("/propiedad")
+def propiedad():
+    return render_template("propiedad.html")
