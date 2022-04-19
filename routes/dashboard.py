@@ -24,7 +24,7 @@ def home():
     form.name.data = ""
     form.mail.data = ""
     form.message.data = ""
-    if "user" in current_user.rank:
+    if "admin" in current_user.rank:
         return render_template("dashboard.html", form = form, MessageList = MessageList)
     else:
         return redirect(url_for("home.home"))
@@ -54,7 +54,7 @@ def property():
                                details, banos, dormitorios, parqueos, fotoperfil, foto1, foto2, foto3, foto4)
         db.session.add(newProperty)
         db.session.commit()
-    if "user" in current_user.rank:
+    if "admin" in current_user.rank:
         return render_template("property.html", form = form)
     else:
         return redirect(url_for("home.home"))

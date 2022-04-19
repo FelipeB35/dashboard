@@ -16,10 +16,10 @@ class Property(db.Model):
     dormitorios = db.Column(db.Integer, nullable = False)
     parqueos = db.Column(db.Integer, nullable = False)
     fotoperfil = db.Column(db.String(10000), nullable = False)
-    foto1 = db.Column(db.String(10000), nullable = False)
-    foto2 = db.Column(db.String(10000), nullable = False)
-    foto3 = db.Column(db.String(10000), nullable = False)
-    foto4 = db.Column(db.String(10000), nullable = False)
+    foto1 = db.Column(db.String(1000), nullable = False)
+    foto2 = db.Column(db.String(1000), nullable = False)
+    foto3 = db.Column(db.String(1000), nullable = False)
+    foto4 = db.Column(db.String(1000), nullable = False)
 
     def __init__(self, name, category, city, size, clasification, price, details, banos, dormitorios, parqueos, fotoperfil, foto1, foto2, foto3, foto4) -> None:
         self.name = name
