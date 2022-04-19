@@ -34,7 +34,6 @@ def home():
 @login_required
 def property():
     form = createPropertyForm()
-    propertyList = Property.query.all()
     if form.validate_on_submit():
         name = form.name.data
         category = form.category.data
@@ -72,6 +71,6 @@ def property():
     form.foto4.data = ""
 
     if "admin" in current_user.rank:
-        return render_template("home.html", form = form, propertyList = propertyList)
+        return render_template("home.html", form = form)
     else:
         return redirect(url_for("home.home"))
