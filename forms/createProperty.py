@@ -56,4 +56,66 @@ class createPropertyForm(FlaskForm):
         ],
         render_kw={"placeholder": "detalles"},
     )
+    
+    banos = IntegerField(
+        validators=[
+            InputRequired()
+        ],
+        render_kw={"placeholder": "baños"},
+    )
+    
+    dormitorios = IntegerField(
+        validators=[
+            InputRequired()
+        ],
+        render_kw={"placeholder": "dormitorios"},
+    )
+    
+    parqueos = IntegerField(
+        validators=[
+            InputRequired()
+        ],
+        render_kw={"placeholder": "parqueos"},
+    )
+    
+    fotoperfil = StringField(
+        validators=[
+            InputRequired(),
+            Length(min=3, max=500),
+        ],
+        render_kw={"placeholder": "link foto principal"},
+    )
+    
+    foto1 = StringField(
+        validators=[
+            InputRequired(),
+            Length(min=3, max=500),
+        ],
+        render_kw={"placeholder": "link foto"},
+    )
+    
+    foto2 = StringField(
+        validators=[
+            InputRequired(),
+            Length(min=3, max=500),
+        ],
+        render_kw={"placeholder": "link foto"},
+    )
+    
+    foto3 = StringField(
+        validators=[
+            InputRequired(),
+            Length(min=3, max=500),
+        ],
+        render_kw={"placeholder": "link foto"},
+    )
+    
+    foto4 = StringField(
+        validators=[
+            InputRequired(),
+            Length(min=3, max=500),
+        ],
+        render_kw={"placeholder": "link foto"},
+    )
+    
     submit = SubmitField("crear")
