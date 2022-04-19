@@ -42,7 +42,16 @@ def property():
         clasification = form.clasification.data
         price = form.price.data
         details = form.details.data
-        newProperty = Property(name, category, city, size, clasification, price, details)
+        banos = form.banos.data
+        dormitorios = form.dormitorios.data
+        parqueos = form.parqueos.data
+        fotoperfil = form.fotoperfil.data
+        foto1 = form.foto1.data
+        foto2 = form.foto2.data
+        foto3 = form.foto3.data
+        foto4 = form.foto4.data
+        newProperty = Property(name, category, city, size, clasification, price,
+                               details, banos, dormitorios, parqueos, fotoperfil, foto1, foto2, foto3, foto4)
         db.session.add(newProperty)
         db.session.commit()
     if "admin" in current_user.rank:
