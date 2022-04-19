@@ -2,18 +2,15 @@
 {% block title %}Propiedad{% endblock %}
 {% block contents %}
 
-{% if propiedad %}
-
-<div style=" background-image: url({{ propiedad.fotoperfil }})" class="img-inmueble">
+<div style=" background-image: url(static/images/ej.jpg)" class="img-inmueble">
 
 </div>
-<h1 class="centrado">{{ propiedad.name }}</h1>
+<h1 class="centrado">Casa en Cumbres de Cuscatlán</h1>
 
 <div class="contenedor detalles">
   <div class="resumen-propiedad cuadro">
     <h3>Descripción de la propiedad</h3>
       <p>
-        <!--
         Planta 1:
         <br>
         - Baño social.
@@ -46,37 +43,34 @@
         - Amplia sala familiar.
         <br>
         - Dos accesos a la segunda planta; acceso principal y acceso al jardín, el que puede servir como salida de emergencia.
-        -->
-        
-        {{ propiedad.details }}
       </p>
     
   </div>
   <div class="precio cuadro">
-    <p>{{ propiedad.category }}</p>
-    <p class="precio-p">Precio: {{ propiedad.price }}</p>
+    <p>Alquiler</p>
+    <p class="precio-p">Precio: $6,000,000</p>
   </div>
   <div class="categorias cuadro">
     <ul class="iconos">
       <li class="centrado icono">
         <p>Dormitorios</p>
         <i class="fa-solid fa-bed"></i>
-        <p>{{ propiedad.dormitorios }}</p>
+        <p>5</p>
       </li>
       <li class="centrado icono">
         <p>Baños</p>
         <i class="fa-solid fa-toilet"></i>
-        <p>{{ propiedad.banos }}</p>
+        <p>7</p>
       </li>
       <li class="centrado icono">
         <p>Parqueos</p>
         <i class="fa-solid fa-car"></i>
-        <p>{{ propiedad.parqueos }}</p>
+        <p>3</p>
       </li>
       <li class="centrado icono">
         <p>Medidas</p>
         <i class="fa-solid fa-ruler-combined"></i>
-        <p>{{ propiedad.parqueos }}</p>
+        <p>3</p>
       </li>
     </ul>
   </div>
@@ -85,21 +79,21 @@
   <div class="seccion contenedor no-100">
     <div class="galeria">
         <a href="static/images/galeria/01.jpg" data-lightbox="galeria">
-            <img src="{{ propiedad.foto1 }}" alt="Imagen 1" width="300px" height="250px">
+            <img src="static/images/galeria/thumbs/01.jpg" alt="Imagen 1" width="300px" height="250px">
         </a>
         <a href="static/images/galeria/02.jpg" data-lightbox="galeria">
-            <img src="{{ propiedad.foto1 }}" alt="Imagen 2" width="300px" height="250px">
+            <img src="static/images/galeria/thumbs/02.jpg" alt="Imagen 2" width="300px" height="250px">
         </a>
         <a href="static/images/galeria/03.jpg" data-lightbox="galeria">
-            <img src="{{ propiedad.foto1 }}" alt="Imagen 3" width="300px" height="250px">
+            <img src="static/images/galeria/thumbs/03.jpg" alt="Imagen 3" width="300px" height="250px">
         </a>
         <a href="static/images/galeria/02.jpg" data-lightbox="galeria">
-          <img src="{{ propiedad.foto1 }}" alt="Imagen 4" width="300px" height="250px">
+          <img src="static/images/galeria/thumbs/02.jpg" alt="Imagen 2" width="300px" height="250px">
         </a>
 
     </div>
 </div>
-{% endif %}
+
 
 {% endblock %}
 
