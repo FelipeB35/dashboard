@@ -1,3 +1,6 @@
+from webbrowser import BackgroundBrowser
+
+from click import BadOptionUsage
 from utils.db import db
 
 class Property(db.Model):
@@ -9,6 +12,10 @@ class Property(db.Model):
     clasification = db.Column(db.String(200), nullable=False)
     price = db.Column(db.Integer, nullable=False)
     details = db.Column(db.String(500), nullable=False)
+    banos = db.Column(db.Integer, nullable=True)
+    dormitorios = db.Column(db.Integer, nullable = True)
+    parqueos = db.Column(db.Integer, nullable = True)
+    foto = db.Column(db.String(10000), nullable = True)
 
     def __init__(self, name, category, city, size, clasification ,price, details) -> None:
         self.name = name
