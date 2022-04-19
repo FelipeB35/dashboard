@@ -50,7 +50,10 @@
                 <tr>
                     <th>Name</th>
                     <th>Category</th>
+                    <th>City</th>
                     <th>Size</th>
+                    <th>Clasification</th>
+                    <th>Price</th>
                 </tr>
             </thead>
             <tbody>
@@ -58,15 +61,15 @@
                 <tr>
                     <td>{{ Property.name }}</td>
                     <td>{{ Property.category }}</td>
+                    <td>{{ Property.city}}</td>
                     <td>{{ Property.size }}</td>
+                    <td>{{ Property.clasification }}</td>
+                    <td>{{ Property.price }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div> 
-
-    {{ PropertyList }}
-
             <div class="centrar-b">
                 <a href="{{ url_for('dashboard.property') }}" class="btn">Crear propiedad</a>
             </div>
