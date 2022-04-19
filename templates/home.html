@@ -80,332 +80,109 @@
 
     </section>
 
+    <!--####################################           PROPIEDADES      ################################################ -->
+ 
+    {% for casa in casas %}
     <div class="ejemplos" id="casa">
       <!--Ejemplo 1-->
       <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url(static/images/ej.jpg); background-size: cover; background-position: center;">
-          <h3 class="precio">$600,000 - Venta </h3>
+        <div class="ejemplo-imagen" style="background-image: url({{ casa.fotoperfil }}); background-size: cover; background-position: center;">
+          <h3 class="precio">{{ casa.price }} - {{ casa.category }} </h3>
         </div>
         <div class="ejemplo-contenido">
-          <h3>Casa en Cumbres de Cuscatlán</h3>
+          <h3>{{ casa.name }}</h3>
 
           <ul class="iconos">
             <li class="centrado icono">
               <i class="fa-solid fa-bed"></i>
-              <p>5</p>
+              <p>{{ casa.dormitorios }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-toilet"></i>
-              <p>7</p>
+              <p>{{ casa.banos }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-car"></i>
-              <p>3</p>
+              <p>{{ casa.parqueos }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-ruler-combined"></i>
-              <p>3</p>
+              <p>{{ casa.size }}</p>
             </li>
           </ul>
           <div class="centrado"> 
-            <a href="{{ url_for('propiedad.propiedad') }}" class="boton boton-morado">Ver</a>
-          </div>
-        </div>
-      </div>
-      <!--Ejemplo 2-->
-      <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url(static/images/ej.jpg); background-size: cover; background-position: center;">
-
-          <h3 class="precio">$600,000 - Venta </h3>
-        </div>
-        <div class="ejemplo-contenido">
-          <h3>Casa en Cumbres de Cuscatlán</h3>
-          
-              
-          <ul class="iconos">
-            <li class="centrado icono">
-              <i class="fa-solid fa-bed"></i>
-              <p>5</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-toilet"></i>
-              <p>7</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-car"></i>
-              <p>3</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-ruler-combined"></i>
-              <p>3</p>
-            </li>
-          </ul>
-          <div class="centrado"> 
-            <a href="{{ url_for('propiedad.propiedad') }}" class="boton boton-morado">Ver</a>
-          </div>
-        </div>
-      </div>
-      <!--Ejemplo 3-->
-      <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url(static/images/ej.jpg); background-size: cover; background-position: center;">
-          
-          <h3 class="precio">$600,000 - Venta </h3>
-        </div>
-        <div class="ejemplo-contenido">
-          <h3>Casa en Cumbres de Cuscatlán</h3>
-          
-              
-          <ul class="iconos">
-            <li class="centrado icono">
-              <i class="fa-solid fa-bed"></i>
-              <p>5</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-toilet"></i>
-              <p>7</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-car"></i>
-              <p>3</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-ruler-combined"></i>
-              <p>3</p>
-            </li>
-          </ul>
-          <div class="centrado"> 
-            <a href="{{ url_for('propiedad.propiedad') }}" class="boton boton-morado">Ver</a>
-          </div>
-        </div>
-      </div>
-      <!--Ejemplo 4-->
-      <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url(static/images/ej.jpg); background-size: cover; background-position: center;">
-          
-          <h3 class="precio">$600,000 - Venta </h3>
-        </div>
-        <div class="ejemplo-contenido">
-          <h3>Casa en Cumbres de Cuscatlán</h3>
-          
-              
-          <ul class="iconos">
-            <li class="centrado icono">
-              <i class="fa-solid fa-bed"></i>
-              <p>5</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-toilet"></i>
-              <p>7</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-car"></i>
-              <p>3</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-ruler-combined"></i>
-              <p>3</p>
-            </li>
-          </ul>
-          <div class="centrado"> 
-            <a href="{{ url_for('propiedad.propiedad') }}" class="boton boton-morado">Ver</a>
-          </div>
-        </div>
-      </div>
-      <!--Ejemplo 4-->
-      <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url(static/images/ej.jpg); background-size: cover; background-position: center;">
-          
-          <h3 class="precio">$600,000 - Venta </h3>
-        </div>
-        <div class="ejemplo-contenido">
-          <h3>Casa en Cumbres de Cuscatlán</h3>
-          
-              
-          <ul class="iconos">
-            <li class="centrado icono">
-              <i class="fa-solid fa-bed"></i>
-              <p>5</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-toilet"></i>
-              <p>7</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-car"></i>
-              <p>3</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-ruler-combined"></i>
-              <p>3</p>
-            </li>
-          </ul>
-          <div class="centrado"> 
-            <a href="{{ url_for('propiedad.propiedad') }}" class="boton boton-morado">Ver</a>
+            <a href="{{ url_for('propiedad.propiedad', id=casa.id) }}" class="boton boton-morado">Ver</a>
           </div>
         </div>
       </div>
     </div>
+    {% endfor %}
+    
+    {% for apartamento in apartamentos %}
     <div class="ejemplos" id="apartamento">
       <!--Ejemplo 1-->
       <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url(static/images/ej.jpg); background-size: cover; background-position: center;">
-          <h3 class="precio">$600,000 - Venta </h3>
+        <div class="ejemplo-imagen" style="background-image: url({{ apartamento.fotoperfil }}); background-size: cover; background-position: center;">
+          <h3 class="precio">{{ apartamento.price }} - {{ apartamento.category}} </h3>
         </div>
         <div class="ejemplo-contenido">
-          <h3>Casa en Cumbres de Cuscatlán</h3>
+          <h3>{{ apartamento.name }}</h3>
 
           <ul class="iconos">
             <li class="centrado icono">
               <i class="fa-solid fa-bed"></i>
-              <p>5</p>
+              <p>{{ apartamento.dormitorios }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-toilet"></i>
-              <p>7</p>
+              <p>{{ apartamento.banos }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-car"></i>
-              <p>3</p>
+              <p>{{ apartamento.parqueos }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-ruler-combined"></i>
-              <p>3</p>
+              <p>{{ apartamento.size }}</p>
             </li>
           </ul>
           <div class="centrado"> 
-            <a href="{{ url_for('propiedad.propiedad') }}" class="boton boton-morado">Ver</a>
-          </div>
-        </div>
-      </div>
-      <!--Ejemplo 2-->
-      <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url(static/images/ej.jpg); background-size: cover; background-position: center;">
-
-          <h3 class="precio">$600,000 - Venta </h3>
-        </div>
-        <div class="ejemplo-contenido">
-          <h3>Casa en Cumbres de Cuscatlán</h3>
-          
-              
-          <ul class="iconos">
-            <li class="centrado icono">
-              <i class="fa-solid fa-bed"></i>
-              <p>5</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-toilet"></i>
-              <p>7</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-car"></i>
-              <p>3</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-ruler-combined"></i>
-              <p>3</p>
-            </li>
-          </ul>
-          <div class="centrado"> 
-            <a href="{{ url_for('propiedad.propiedad') }}" class="boton boton-morado">Ver</a>
-          </div>
-        </div>
-      </div>
-      <!--Ejemplo 3-->
-      <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url(static/images/ej.jpg); background-size: cover; background-position: center;">
-          
-          <h3 class="precio">$600,000 - Venta </h3>
-        </div>
-        <div class="ejemplo-contenido">
-          <h3>Casa en Cumbres de Cuscatlán</h3>
-          
-              
-          <ul class="iconos">
-            <li class="centrado icono">
-              <i class="fa-solid fa-bed"></i>
-              <p>5</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-toilet"></i>
-              <p>7</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-car"></i>
-              <p>3</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-ruler-combined"></i>
-              <p>3</p>
-            </li>
-          </ul>
-          <div class="centrado"> 
-            <a href="{{ url_for('propiedad.propiedad') }}" class="boton boton-morado">Ver</a>
-          </div>
-        </div>
-      </div>
-      <!--Ejemplo 4-->
-      <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url(static/images/ej.jpg); background-size: cover; background-position: center;">
-          
-          <h3 class="precio">$600,000 - Venta </h3>
-        </div>
-        <div class="ejemplo-contenido">
-          <h3>Casa en Cumbres de Cuscatlán</h3>
-          
-              
-          <ul class="iconos">
-            <li class="centrado icono">
-              <i class="fa-solid fa-bed"></i>
-              <p>5</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-toilet"></i>
-              <p>7</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-car"></i>
-              <p>3</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-ruler-combined"></i>
-              <p>3</p>
-            </li>
-          </ul>
-          <div class="centrado"> 
-            <a href="{{ url_for('propiedad.propiedad') }}" class="boton boton-morado">Ver</a>
+            <a href="{{ url_for('propiedad.propiedad', id=apartamento.id) }}" class="boton boton-morado">Ver</a>
           </div>
         </div>
       </div>
     </div>
+    {% endfor %}
+    {% for rancho in ranchos %}
     <div class="ejemplos" id="rancho">
       <!--Ejemplo 1-->
       <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url(static/images/ej.jpg); background-size: cover; background-position: center;">
-          <h3 class="precio">$600,000 - Venta </h3>
+        <div class="ejemplo-imagen" style="background-image: url({{ rancho.fotoperfil }}); background-size: cover; background-position: center;">
+          <h3 class="precio">{{ rancho.price }} - {{ rancho.category }} </h3>
         </div>
         <div class="ejemplo-contenido">
-          <h3>Casa en Cumbres de Cuscatlán</h3>
+          <h3>{{ rancho.name }}</h3>
 
           <ul class="iconos">
             <li class="centrado icono">
               <i class="fa-solid fa-bed"></i>
-              <p>5</p>
+              <p>{{ rancho.dormitorios }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-toilet"></i>
-              <p>7</p>
+              <p>{{ rancho.banos }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-car"></i>
-              <p>3</p>
+              <p>{{ rancho.parqueos }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-ruler-combined"></i>
-              <p>3</p>
+              <p>{{ rancho.size }}</p>
             </li>
           </ul>
           <div class="centrado"> 
-            <a href="{{ url_for('propiedad.propiedad') }}" class="boton boton-morado">Ver</a>
+            <a href="{{ url_for('propiedad.propiedad', id=rancho.id) }}" class="boton boton-morado">Ver</a>
           </div>
         </div>
       </div>
@@ -442,41 +219,10 @@
           </div>
         </div>
       </div>
-      <!--Ejemplo 3-->
-      <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url(static/images/ej.jpg); background-size: cover; background-position: center;">
-          
-          <h3 class="precio">$600,000 - Venta </h3>
-        </div>
-        <div class="ejemplo-contenido">
-          <h3>Casa en Cumbres de Cuscatlán</h3>
-          
-              
-          <ul class="iconos">
-            <li class="centrado icono">
-              <i class="fa-solid fa-bed"></i>
-              <p>5</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-toilet"></i>
-              <p>7</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-car"></i>
-              <p>3</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-ruler-combined"></i>
-              <p>3</p>
-            </li>
-          </ul>
-          <div class="centrado"> 
-            <a href="{{ url_for('propiedad.propiedad') }}" class="boton boton-morado">Ver</a>
-          </div>
-        </div>
-      </div>
+
       
     </div>
+    {% endfor %}
   </main>
   
   <div class="enumerador parallax">

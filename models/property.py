@@ -21,7 +21,7 @@ class Property(db.Model):
     foto3 = db.Column(db.String(10000), nullable = True)
     foto4 = db.Column(db.String(10000), nullable = True)
 
-    def __init__(self, name, category, city, size, clasification ,price, details) -> None:
+    def __init__(self, name, category, city, size, clasification, price, details, banos, dormitorios, parqueos, fotoperfil, foto1, foto2, foto3, foto4) -> None:
         self.name = name
         self.category = category
         self.city = city
@@ -29,3 +29,11 @@ class Property(db.Model):
         self.clasification = clasification
         self.price = price
         self.details = details
+        self.banos = banos
+        self.dormitorios = dormitorios
+        self.parqueos = parqueos
+        self.fotoperfil = fotoperfil
+        self.foto1 = foto1
+        self.foto2 = foto2
+        self.foto3 = foto3
+        self.foto4 = foto4
