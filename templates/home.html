@@ -82,47 +82,51 @@
 
     <!--####################################           PROPIEDADES      ################################################ -->
  
-    {% for casa in casas %}
+
+
+    {% for i in property %}
+    {% if i.clasification == casa %}
     <div class="ejemplos" id="casa">
       <!--Ejemplo 1-->
       <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url({{ casa.fotoperfil }}); background-size: cover; background-position: center;">
-          <h3 class="precio">{{ casa.price }} - {{ casa.category }} </h3>
+        <div class="ejemplo-imagen" style="background-image: url(); background-size: cover; background-position: center;">
+          <h3 class="precio">{{ i.price }} - {{ i.category }} </h3>
         </div>
         <div class="ejemplo-contenido">
-          <h3>{{ casa.name }}</h3>
+          <h3>{{ i.name }}</h3>
 
           <ul class="iconos">
             <li class="centrado icono">
               <i class="fa-solid fa-bed"></i>
-              <p>{{ casa.dormitorios }}</p>
+              <p>{{ i.dormitorios }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-toilet"></i>
-              <p>{{ casa.banos }}</p>
+              <p>{{ i.banos }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-car"></i>
-              <p>{{ casa.parqueos }}</p>
+              <p>{{ i.parqueos }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-ruler-combined"></i>
-              <p>{{ casa.size }}</p>
+              <p>{{ i.size }}</p>
             </li>
           </ul>
           <div class="centrado"> 
-            <a href="{{ url_for('propiedad.propiedad', id=casa.id) }}" class="boton boton-morado">Ver</a>
+            <a href="{{ url_for('propiedad.propiedad', id=i.id) }}" class="boton boton-morado">Ver</a>
           </div>
         </div>
       </div>
     </div>
+    {% endif %}
     {% endfor %}
     
     {% for apartamento in apartamentos %}
     <div class="ejemplos" id="apartamento">
       <!--Ejemplo 1-->
       <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url({{ apartamento.fotoperfil }}); background-size: cover; background-position: center;">
+        <div class="ejemplo-imagen" style="background-image: url(); background-size: cover; background-position: center;">
           <h3 class="precio">{{ apartamento.price }} - {{ apartamento.category}} </h3>
         </div>
         <div class="ejemplo-contenido">
@@ -157,7 +161,7 @@
     <div class="ejemplos" id="rancho">
       <!--Ejemplo 1-->
       <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url({{ rancho.fotoperfil }}); background-size: cover; background-position: center;">
+        <div class="ejemplo-imagen" style="background-image: url(); background-size: cover; background-position: center;">
           <h3 class="precio">{{ rancho.price }} - {{ rancho.category }} </h3>
         </div>
         <div class="ejemplo-contenido">

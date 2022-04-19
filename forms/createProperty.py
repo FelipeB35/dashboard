@@ -81,7 +81,7 @@ class createPropertyForm(FlaskForm):
     fotoperfil = StringField(
         validators=[
             InputRequired(),
-            Length(min=3, max=10000),
+            Length(min=3, max=1000),
         ],
         render_kw={"placeholder": "link foto principal"},
     )
@@ -89,7 +89,7 @@ class createPropertyForm(FlaskForm):
     foto1 = StringField(
         validators=[
             InputRequired(),
-            Length(min=3, max=10000),
+            Length(min=3, max=1000),
         ],
         render_kw={"placeholder": "link foto"},
     )
@@ -97,7 +97,7 @@ class createPropertyForm(FlaskForm):
     foto2 = StringField(
         validators=[
             InputRequired(),
-            Length(min=3, max=10000),
+            Length(min=3, max=1000),
         ],
         render_kw={"placeholder": "link foto"},
     )
@@ -105,7 +105,7 @@ class createPropertyForm(FlaskForm):
     foto3 = StringField(
         validators=[
             InputRequired(),
-            Length(min=3, max=10000),
+            Length(min=3, max=1000),
         ],
         render_kw={"placeholder": "link foto"},
     )
@@ -113,7 +113,7 @@ class createPropertyForm(FlaskForm):
     foto4 = StringField(
         validators=[
             InputRequired(),
-            Length(min=3, max=10000),
+            Length(min=3, max=1000),
         ],
         render_kw={"placeholder": "link foto"},
     )

@@ -15,7 +15,7 @@ class Property(db.Model):
     banos = db.Column(db.Integer, nullable=False)
     dormitorios = db.Column(db.Integer, nullable = False)
     parqueos = db.Column(db.Integer, nullable = False)
-    fotoperfil = db.Column(db.String(10000), nullable = False)
+    fotoperfil = db.Column(db.String(1000), nullable = False)
     foto1 = db.Column(db.String(1000), nullable = False)
     foto2 = db.Column(db.String(1000), nullable = False)
     foto3 = db.Column(db.String(1000), nullable = False)
