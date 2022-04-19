@@ -428,8 +428,8 @@ a.activo::after{
     margin: 0 auto;
     height: 2rem;
     width: 3rem;
-    bottom: -2rem;
-    background-image: url(../images/talleres-flecha.jpg);
+    bottom: -2rem;   
+    background-image: url(../images/flecha-01.png);
     background-position: top center;
     background-repeat: no-repeat;
     
