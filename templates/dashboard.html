@@ -13,31 +13,59 @@
     <title>Dashboard</title>
 </head>
 <body>
+    
     <div class="alldash">
-            <br>
-        <div class="envio">
-            <h1>Mensajes</h1>
-        </div>
-        <div class="envio2">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Message</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for Message in MessageList %}
-                    <tr>
-                        <td>{{ Message.name }}</td>
-                        <td>{{ Message.mail }}</td>
-                        <td>{{ Message.message }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div> 
+        <br>
+    <div class="envio">
+        <h1>Propiedades</h1>
+    </div>
+    <div class="envio2">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for Message in MessageList %}
+                <tr>
+                    <td>{{ Message.name }}</td>
+                    <td>{{ Message.mail }}</td>
+                    <td>{{ Message.message }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div> 
+    <div class="alldash">
+        <br>
+    <div class="envio">
+        <h1>Propiedades</h1>
+    </div>
+    <div class="envio2">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for Property in PropertyList %}
+                <tr>
+                    <td>{{ Property.name }}</td>
+                    <td>{{ Property.category }}</td>
+                    <td>{{ Property.size }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div> 
+
+    {{ PropertyList }}
 
             <div class="centrar-b">
                 <a href="{{ url_for('dashboard.property') }}" class="btn">Crear propiedad</a>

@@ -1,6 +1,3 @@
-from webbrowser import BackgroundBrowser
-
-from click import BadOptionUsage
 from utils.db import db
 
 class Property(db.Model):

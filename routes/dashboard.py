@@ -12,20 +12,10 @@ dashboard = Blueprint("dashboard", __name__)
 @dashboard.route("/dashboard", methods=["GET", "POST"])
 @login_required
 def home():
-    form = createMessageForm()
     MessageList = Message.query.all()
-    if form.validate_on_submit():
-        name = form.name.data
-        mail = form.mail.data
-        message = form.message.data
-        newMessage = Message(name, mail, message)
-        db.session.add(newMessage)
-        db.session.commit()
-    form.name.data = ""
-    form.mail.data = ""
-    form.message.data = ""
+    PropertyList = Property.query.all()
     if "admin" in current_user.rank:
-        return render_template("dashboard.html", form = form, MessageList = MessageList)
+        return render_template("dashboard.html", MessageList = MessageList, PropertyList = PropertyList)
     else:
         return redirect(url_for("home.home"))
     
@@ -71,6 +61,6 @@ def property():
     form.foto4.data = ""
 
     if "admin" in current_user.rank:
-        return render_template("home.html", form = form)
+        return render_template("property.html", form = form)
     else:
         return redirect(url_for("home.home"))
