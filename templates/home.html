@@ -82,152 +82,126 @@
     </section>
 
     <!--####################################           PROPIEDADES      ################################################ -->
-
+    
     <div class="ejemplos" id="casa">
       <!--Ejemplo 1-->
+    {% if ListCasas %}
+    {% for Casa in ListCasas %}
       <div class="ejemplo">
-        {% for Casa in ListCasas %}
-        <div class="ejemplo-imagen" style="background-image: url(); background-size: cover; background-position: center;">
-          <h3 class="precio">{{ Casa.price }} - {{ Casa.category }} </h3>
+        <div class="ejemplo-imagen" style="background-image: url({{ Casa.fotoperfil}}); background-size: cover; background-position: center;">
+          <h3 class="precio">{{ Casa.price }} - {{ Casa.category}} </h3>
         </div>
         <div class="ejemplo-contenido">
-          <h3></h3>
+          <h3>{{ Casa.name }}</h3>
 
           <ul class="iconos">
             <li class="centrado icono">
               <i class="fa-solid fa-bed"></i>
-              <p></p>
+              <p>{{ Casa.dormitorios }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-toilet"></i>
-              <p>a</p>
+              <p>{{ Casa.banos }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-car"></i>
-              <p>a</p>
+              <p>{{ Casa.parqueos }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-ruler-combined"></i>
-              <p>a</p>
+              <p>{{ Casa.size }}</p>
             </li>
           </ul>
           <div class="centrado"> 
-            <a href="{{ url_for('propiedad.propiedad', id=1) }}" class="boton boton-morado">Ver</a>
+            <a href="{{ url_for('propiedad.propiedad', id=Casa.id) }}" class="boton boton-morado">Ver</a>
 
           </div>
         </div>
-        {% endfor %}
       </div>
+      {% endfor %}
+      {% endif %}
     </div>
+
     
-    {% for apartamento in ListApartamentos %}
+    {% if ListApartamentos %}
+    {% for Apartamento in ListApartamentos %}
     <div class="ejemplos" id="apartamento">
       <!--Ejemplo 1-->
       <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url(); background-size: cover; background-position: center;">
-          <h3 class="precio">{{ apartamento.price }} - {{ apartamento.category}} </h3>
+        <div class="ejemplo-imagen" style="background-image: url({{ Apartamento.fotoperfil}}); background-size: cover; background-position: center;">
+          <h3 class="precio">{{ Apartamento.price }} - {{ Apartamento.category}} </h3>
         </div>
         <div class="ejemplo-contenido">
-          <h3>{{ apartamento.name }}</h3>
+          <h3>{{ Apartamento.name }}</h3>
 
           <ul class="iconos">
             <li class="centrado icono">
               <i class="fa-solid fa-bed"></i>
-              <p>{{ apartamento.dormitorios }}</p>
+              <p>{{ Apartamento.dormitorios }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-toilet"></i>
-              <p>{{ apartamento.banos }}</p>
+              <p>{{ Apartamento.banos }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-car"></i>
-              <p>{{ apartamento.parqueos }}</p>
+              <p>{{ Apartamento.parqueos }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-ruler-combined"></i>
-              <p>{{ apartamento.size }}</p>
+              <p>{{ Apartamento.size }}</p>
             </li>
           </ul>
           <div class="centrado"> 
-            <a href="{{ url_for('propiedad.propiedad', id=apartamento.id) }}" class="boton boton-morado">Ver</a>
+            <a href="{{ url_for('propiedad.propiedad', id=Apartamento.id) }}" class="boton boton-morado">Ver</a>
 
           </div>
         </div>
       </div>
     </div>
-    {% endfor %}
-    {% for rancho in ListRanchos %}
+      {% endfor %}
+    {% endif %}
+
+    {% if ListRanchos %}
+    {% for Rancho in ListRanchos %}
     <div class="ejemplos" id="rancho">
       <!--Ejemplo 1-->
       <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url(); background-size: cover; background-position: center;">
-          <h3 class="precio">{{ rancho.price }} - {{ rancho.category }} </h3>
+        <div class="ejemplo-imagen" style="background-image: url({{ Rancho.fotoperfil}}); background-size: cover; background-position: center;">
+          <h3 class="precio">{{ Rancho.price }} - {{ Rancho.category }} </h3>
         </div>
         <div class="ejemplo-contenido">
-          <h3>{{ rancho.name }}</h3>
+          <h3>{{ Rancho.name }}</h3>
 
           <ul class="iconos">
             <li class="centrado icono">
               <i class="fa-solid fa-bed"></i>
-              <p>{{ rancho.dormitorios }}</p>
+              <p>{{ Rancho.dormitorios }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-toilet"></i>
-              <p>{{ rancho.banos }}</p>
+              <p>{{ Rancho.banos }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-car"></i>
-              <p>{{ rancho.parqueos }}</p>
+              <p>{{ Rancho.parqueos }}</p>
             </li>
             <li class="centrado icono">
               <i class="fa-solid fa-ruler-combined"></i>
-              <p>{{ rancho.size }}</p>
+              <p>{{ Rancho.size }}</p>
             </li>
           </ul>
           <div class="centrado"> 
-            <a href="{{ url_for('propiedad.propiedad', id=rancho.id) }}" class="boton boton-morado">Ver</a>
+            <a href="{{ url_for('propiedad.propiedad', id=Rancho.id) }}" class="boton boton-morado">Ver</a>
 
-          </div>
-        </div>
-      </div>
-      <!--Ejemplo 2-->
-      <div class="ejemplo">
-        <div class="ejemplo-imagen" style="background-image: url(static/images/ej.jpg); background-size: cover; background-position: center;">
-
-          <h3 class="precio">$600,000 - Venta </h3>
-        </div>
-        <div class="ejemplo-contenido">
-          <h3>Casa en Cumbres de Cuscatlán</h3>
-          
-              
-          <ul class="iconos">
-            <li class="centrado icono">
-              <i class="fa-solid fa-bed"></i>
-              <p>5</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-toilet"></i>
-              <p>7</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-car"></i>
-              <p>3</p>
-            </li>
-            <li class="centrado icono">
-              <i class="fa-solid fa-ruler-combined"></i>
-              <p>3</p>
-            </li>
-          </ul>
-          <div class="centrado"> 
-            <a href="{{ url_for('home.home') }}" class="boton boton-morado">Ver</a>
           </div>
         </div>
       </div>
     </div>
-    {% endfor %}
+      {% endfor %}
+    {% endif %}
   </main>
-  {{ PropertyList }}
-  {{ ListCasas }}
+
   <div class="enumerador parallax">
     <div class="contenedor">
         <ul class="resumen-pa">

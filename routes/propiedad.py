@@ -7,5 +7,5 @@ prop = Blueprint("propiedad", __name__)
 
 @prop.route("/propiedad/<int:id>")
 def propiedad(id):
-    propertyList = Property.query.filter_by(id=id).first()
-    return render_template("propiedad.html", propiedad = propertyList)
+    PropertyList = Property.query.filter_by(id=id).first()
+    return render_template("propiedad.html", Propiedad = PropertyList)
